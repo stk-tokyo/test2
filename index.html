@@ -64,9 +64,7 @@
   // マップの初期化
     var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 16,
-    center: {lat: str_lat, lng: str_lng},
-    mapTypeId: google.maps.MapTypeId.SATELLITE ,
-    //backgroundColor: "red" ,
+    center: {lat: str_lat, lng: str_lng}
     });
     // クリックイベントを追加
     map.addListener('click', function(e) {
@@ -80,9 +78,7 @@
       // マップの初期化
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 16,
-        center: {lat:33.462882, lng: 132.423368},
-        mapTypeId: google.maps.MapTypeId.SATELLITE ,
-        //backgroundColor: "red" ,
+        center: {lat:33.462882, lng: 132.423368}
       });
 
       // クリックイベントを追加
@@ -116,14 +112,7 @@
       // マーカーを設置
       var marker = new google.maps.Marker({
         position: lat_lng,
-        map: map,
-        label: {
-		text:""+click_count,
-		color: "white" ,
-		fontSize: "20px" ,
-	},
-  		scaledSize: new google.maps.Size(15,30) ,
-	},
+        map: map
       });
 
       var size = new google.maps.Size( 200, 200 ) ;
