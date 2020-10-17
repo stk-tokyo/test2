@@ -164,13 +164,13 @@
 
       var uri = createDataUriFromString(tableToCsvString(table));
       return uri;
+	console.log(uri);
     })();
 
-console.log(uri)
 
     // CSVに出力
     function save(){
-        convertintoCsv(table);
+        convertintoCsv();
         document.getElementById('moji').textContent = uri;
     }
 
