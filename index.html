@@ -124,8 +124,7 @@
 
 
     // CSVファイルに出力するための関数
-  function convertintoCsv(table) {
-      var tableToCsvString = function(table) {
+  function tableToCsvString(table) {
           var str = '\uFEFF';
           for (var i = 0, imax = table.length - 1; i <= imax; ++i) {
               var row = table[i];
@@ -139,14 +138,12 @@
           }
           return str;
       };
-
-	 document.getElementById('moji').textContent = str;
-    };
-
+   
 
     // CSVに出力
     function save(){
         convertintoCsv(table);
+	document.getElementById('moji').textContent = str;
     }
 
 
