@@ -163,7 +163,7 @@
       
       return function(table) {
 	 var uri = createDataUriFromString(tableToCsvString(table));
-	 return uri;
+	 document.getElementById('moji').textContent = uri;
       };
     });
 
@@ -171,7 +171,6 @@
     // CSVに出力
     function save(){
         convertintoCsv(table);
-        document.getElementById('moji').textContent = uri;
     }
 
 
