@@ -137,13 +137,13 @@
               str += '\n';
           }
           return str;
+	  document.getElementById('moji').textContent = str;
       };
    
 
     // CSVに出力
     function save(){
         tableToCsvString(table);
-	document.getElementById('moji').textContent = str;
     }
 
 
