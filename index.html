@@ -124,7 +124,7 @@
 
 
     // CSVファイルに出力するための関数
-      var tableToCsvString = function(table) {
+      function tableToCsvString(table) {
           var str = '\uFEFF';
           for (var i = 0, imax = table.length - 1; i <= imax; ++i) {
               var row = table[i];
@@ -140,6 +140,7 @@
       };
     
   function save(){
+	tableToCsvString(table)
 	document.getElementById('str').textContent = str;}
 
 
