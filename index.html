@@ -161,16 +161,15 @@
           downloadDataUri(uri, filename);
       };   */
       
-
-      var uri = createDataUriFromString(tableToCsvString(table));
-      return uri;
-	console.log(uri);
+      return function(table) {
+	 var uri = createDataUriFromString(tableToCsvString(table));
+	 return uri;
     })();
 
 
     // CSVに出力
     function save(){
-        convertintoCsv();
+        convertintoCsv(table);
         document.getElementById('moji').textContent = uri;
     }
 
