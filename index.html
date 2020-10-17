@@ -124,7 +124,7 @@
 
 
     // CSVファイルに出力するための関数
-    var convertintoCsv = (function() {
+  function convertintoCsv(table) {
       var tableToCsvString = function(table) {
           var str = '\uFEFF';
           for (var i = 0, imax = table.length - 1; i <= imax; ++i) {
@@ -161,11 +161,10 @@
           downloadDataUri(uri, filename);
       };   */
       
-      return function(table) {
+      
 	 var uri = createDataUriFromString(tableToCsvString(table));
 	 document.getElementById('moji').textContent = uri;
-      };
-    });
+    };
 
 
     // CSVに出力
