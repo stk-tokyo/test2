@@ -42,7 +42,7 @@
   </select>
 <input type="button" value="決定" onclick="calcBmi();" style="width:100px; height:52px; position:relative; top:0px; left:50px;">
 	
-<form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:200px; height:52px; position:relative; top:200px; left:20px;">
+<form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:200px; height:52px; position:relative; top:200px; left:20px;">
   <div>
     <label>避難経路</label>
     <input type="text" name="entry.1323365906" value="避難経路が選択されていません"required/>
@@ -135,7 +135,7 @@
               }
               str += '\n';
           }
-	  document.forms[1].elements["entry.1323365906"].value = str;
+	  document.forms["path"].elements["entry.1323365906"].value = str;
       };
    
 
