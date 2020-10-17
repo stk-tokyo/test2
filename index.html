@@ -124,7 +124,7 @@
 
 
     // CSVファイルに出力するための関数
-    var convertintoCsv = (function() {
+    function convertintoCsv() = {
       var tableToCsvString = function(table) {
           var str = '\uFEFF';
           for (var i = 0, imax = table.length - 1; i <= imax; ++i) {
@@ -164,7 +164,7 @@
 
       var uri = createDataUriFromString(tableToCsvString(table));
       return uri;
-    })();
+    }();
 
 
     // CSVに出力
