@@ -139,16 +139,19 @@
           return str;
       };
     
+	  
+  fuction createDataUriFromString(str) {
+          var uri = 'data:text/csv,' + encodeURIComponent(str);
+      }
+	  
+	  
   function save(){
 	tableToCsvString(table);
-	document.getElementById('str').textContent = table;}
-
-
+	createDataUriFromString(str);
+	document.getElementById('str').textContent = uri;}
+	  
+	  
 /*
-      var createDataUriFromString = function(str) {
-          return 'data:text/csv,' + encodeURIComponent(str);
-      }
-
       var downloadDataUri = function(uri, filename) {
           var link = document.createElement('a');
           link.download = filename;
