@@ -13,11 +13,7 @@
     html, body {
       height: 100%;
       margin: 0;
-      padding: 0;
-    }
-    #map {
-      height: 80%;
-      width: 80%;
+      padding: 20px;
     }
   </style>
 </head>
@@ -25,10 +21,10 @@
 
 <div><h1><b>津波からの避難に関するアンケート</b></h1></div>
 	
-<form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:80%; height:600px; position:relative;top:50px">
+<form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:80%; position:relative;top:20px">
 　　<div>
      <label>ご住所</label>
-     <input type="text" name="entry.1763673255"/>
+     <input type="text" name="entry.1763673255">
    </div>
    <div>
      <label>性別</label>
@@ -47,25 +43,25 @@
   <button type="submit">送信</button>
 </form>
 	
-<form style="width:350px; height:400px; position:relative; top:50px;">
+<form style="position:relative; top:20px;">
   <select id="place" style="width:200px; height:52px;">
     <option value="">地域を選択してください</option>
     <option value="yawatahama">八幡浜市街</option>
     <option value="minatoura">湊浦</option>
     <option value="sionasi">塩成</option>
   </select>
-<input type="button" value="決定" onclick="calcBmi();" style="width:100px; height:52px; position:relative;">
+<input type="button" value="決定" onclick="calcBmi();" style="position:relative;">
 </form>
 
-<div id="map" style="position:relative; top:40px; left:20px;"　align="center"></div>
+<div id="map" style="position:relative;height:70%; width:80%; top:30px; left:20px;"　align="center"></div>
 	
-<ul style="position:relative;top:-40px; right:600px">
+<ul style="position:relative;">
     <li><b>ポイント数: </b><span id="cnt"></span></li>
     <li><b>緯度: </b><span id="lat"></span></li>
     <li><b>経度: </b><span id="lng"></span></li>
 </ul>
 	
-<input type="button" value="避難経路を保存" onclick="save();" style="width:200px; height:52px; position:relative; top:40px">
+<input type="button" value="避難経路を保存" onclick="save();" style="position:relative; top:30px">
 
 
 
