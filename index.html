@@ -24,15 +24,8 @@
 <body>
 
 <div><h1><b>緯度経度取得</b></h1></div>
-  <div id="map" style="width:900px; height:600px; position:absolute; top:140px; left:10px;"></div>
-  <ul style="position:absolute; top:155px; left:930px;"><font font size="5">
-    <li><b>ポイント数: </b><span id="cnt"></span></li>
-    <li><b>緯度: </b><span id="lat"></span></li>
-    <li><b>経度: </b><span id="lng"></span></li>
-  </font>
-  </ul>
-
-<form style="width:350px; height:400px; position:absolute; top:300px; left:950px;">
+	
+<form style="width:350px; height:400px; position:absolute; top:70px; left:10px;">
   <select id="place" style="width:200px; height:52px;"><font size="5"> 
     <option value="">地域を選択してください</option>
     <option value="yawatahama">八幡浜市街</option>
@@ -40,16 +33,25 @@
     <option value="sionasi">塩成</option>
   </font>
   </select>
-<input type="button" value="決定" onclick="calcBmi();" style="width:100px; height:52px; position:relative; top:0px; left:50px;">
+<input type="button" value="決定" onclick="calcBmi();" style="width:100px; height:52px; position:relative;">
 </form>
+
+<div id="map" style="width:90%; height:70%; position:absolute; top:140px; left:10px;"></div>
 	
-<form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:200px; height:52px; position:relative; top:200px; left:20px;">
+<ul style="position:relative;"><font font size="5">
+    <li><b>ポイント数: </b><span id="cnt"></span></li>
+    <li><b>緯度: </b><span id="lat"></span></li>
+    <li><b>経度: </b><span id="lng"></span></li>
+ </font>
+</ul>
+	
+<input type="button" value="避難経路を保存" onclick="save();" style="width:200px; height:52px; position:relative;">
+
+<form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:200px; height:52px; position:relative;">
     <label>避難経路</label>
     <input type="text" name="entry.1323365906" value="避難経路が選択されていません"required/>
   <button type="submit">送信</button>
 </form>
-<input type="button" value="避難経路を保存" onclick="save();" style="width:200px; height:52px; position:relative; top:600px; left:1000px;">
-
 
   <script>
     var array0 = [['marker','latitude','longitude']];
@@ -121,7 +123,7 @@
     }
 
 
-    // CSVファイルに出力するための関数
+    // 配列を文字列に変換するための関数
   function tableToCsvString(table) {
           var str = '\uFEFF';
           for (var i = 0, imax = table.length - 1; i <= imax; ++i) {
@@ -138,7 +140,7 @@
       };
    
 
-    // CSVに出力
+    // 文字列を出力
     function save(){
         tableToCsvString(table);
     }
