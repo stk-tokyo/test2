@@ -23,35 +23,51 @@
 </head>
 <body>
 
-<div><h1><b>緯度経度取得</b></h1></div>
+<div><h1><b>津波からの避難に関するアンケート</b></h1></div>
 	
-<form style="width:350px; height:400px; position:absolute; top:70px; left:10px;">
-  <select id="place" style="width:200px; height:52px;"><font size="5"> 
+<form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:80%; height:600px; position:relative;top:50px">
+　　<div>
+     <label>ご住所</label>
+     <input type="text" name="entry.1763673255"/>
+   </div>
+   <div>
+     <label>性別</label>
+     <input type="radio" name="entry.667348671" value="0">男
+     <input type="radio" name="entry.667348671" value="1">女
+     <input type="radio" name="entry.667348671" value="2">回答しない
+   </div>
+   <div>
+     <label>年齢</label>
+     <input type="text" name="entry.1926174947">
+   </div>
+   <div>
+     <label>以下の地図上をクリックして、避難経路に沿ってピンを立ててください.
+     <input type="text" name="entry.1323365906" value="避難経路が選択されていません"required/>
+   </div>
+  <button type="submit">送信</button>
+</form>
+	
+<form style="width:350px; height:400px; position:relative; top:50px;">
+  <select id="place" style="width:200px; height:52px;">
     <option value="">地域を選択してください</option>
     <option value="yawatahama">八幡浜市街</option>
     <option value="minatoura">湊浦</option>
     <option value="sionasi">塩成</option>
-  </font>
   </select>
 <input type="button" value="決定" onclick="calcBmi();" style="width:100px; height:52px; position:relative;">
 </form>
 
-<div id="map" style="width:90%; height:70%; position:absolute; top:140px; left:10px;"></div>
+<div id="map" style="position:relative; top:40px; left:20px;"　align="center"></div>
 	
-<ul style="position:relative;"><font font size="5">
+<ul style="position:relative;top:-40px; right:600px">
     <li><b>ポイント数: </b><span id="cnt"></span></li>
     <li><b>緯度: </b><span id="lat"></span></li>
     <li><b>経度: </b><span id="lng"></span></li>
- </font>
 </ul>
 	
-<input type="button" value="避難経路を保存" onclick="save();" style="width:200px; height:52px; position:relative;">
+<input type="button" value="避難経路を保存" onclick="save();" style="width:200px; height:52px; position:relative; top:40px">
 
-<form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:200px; height:52px; position:relative;">
-    <label>避難経路</label>
-    <input type="text" name="entry.1323365906" value="避難経路が選択されていません"required/>
-  <button type="submit">送信</button>
-</form>
+
 
   <script>
     var array0 = [['marker','latitude','longitude']];
