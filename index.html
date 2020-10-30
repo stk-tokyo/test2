@@ -23,20 +23,163 @@
 	
 <form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:80%; position:relative;top:20px;">
 　　<div>
-     <label>ご住所</label>
+     <label>問１：あなたの世帯の現住所を教えてください。</label>
      <input type="text" name="entry.1763673255">
    </div>
+	
    <div>
-     <label>性別</label>
-     <input type="radio" name="entry.667348671" value="男">男
-     <input type="radio" name="entry.667348671" value="女">女
-     <input type="radio" name="entry.667348671" value="回答しない">回答しない
-　　　<!--表示内容とvalueを同じにしないと上手く受け渡せない-->
+     <label>問２：あなたと世帯主との続柄について教えてください。世帯主とは、あなたの世帯で最も収入の多い人のことです。</label>
+     <select id="relation" required>
+     	<option disabled selected>選択してください</option>
+     	<option value="世帯主本人">世帯主本人</option>
+     	<option value="夫・妻">夫・妻</option>
+     	<option value="父・母">父・母</option>
+     	<option value="兄弟・姉妹">兄弟・姉妹</option>
+     	<option value="子ども">子ども</option>
+	<option value="祖父母">祖父母</option>
+	<option value="孫">孫</option>
+	<option value="その他">その他</option>
+     </select>
+     <input type="hidden" name="entry.1205779165">
    </div>
+	
    <div>
-     <label>年齢</label>
+     <label>問３：あなたの性別を教えてください。</label>
+     <select id="sex" required>
+     	<option disabled selected>選択してください</option>
+     	<option value="男">男</option>
+	<option value="女">女</option>
+	<option value="その他">その他</option>
+     </select>
+     <input type="hidden" name="entry.667348671">
+   </div>
+	   
+   <div>
+     <label>問４：あなたの年齢を教えてください。</label>
      <input type="text" name="entry.1926174947">
    </div>
+	   
+　　<div>
+     <label>問５：あなたの職業について以下の中から選択してください。</label>
+     <select id="occupation" required>
+     	<option disabled selected>選択してください</option>
+     	<option value="会社員（正社員）">会社員（正社員）</option>
+     	<option value="会社員（契約社員）">会社員（契約社員）</option>
+     	<option value="公務員">公務員</option>
+     	<option value="自営業">自営業</option>
+     	<option value="農業・漁業関係者">農業・漁業関係者</option>
+	<option value="会社役員・経営者">会社役員・経営者</option>
+	<option value="専業主婦・主夫">専業主婦・主夫</option>
+	<option value="パート・アルバイト">パート・アルバイト</option>
+	<option value="学生（大学・高専・専門学校）">学生（大学・高専・専門学校）</option>
+	<option value="学生（小・中・高校生）">学生（小・中・高校生）</option>
+	<option value="無職">無職</option>
+	<option value="その他">その他</option>
+     </select>
+     <input type="hidden" name="entry.1962891009">
+   </div>
+	   
+　　<div>
+   　　<label>問６：次の役職・職業に該当する方は当てはまるものを全て選択してください。</label>
+   　　<label>
+      　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="消防団員">消防団員
+　　　　</label>
+　　　　<label>
+      　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="学校職員">学校職員
+　　　　</label>
+　　　　<label>
+      　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="自治会役員">自治会役員
+　　　　</label>
+　　　　<label>
+      　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="福祉施設職員">福祉施設職員
+　　　　</label>
+   </div>
+
+   <div>
+     <label>問７：あなたは避難するに当たって、他の人の助けを必要としていますか。助けを必要とする場合はその理由を選択してください。。</label>
+     <select id="help" required>
+     	<option disabled selected>選択してください</option>
+     	<option value="助けは必要ない。">助けは必要ない。</option>
+	<option value="要支援認定を受けており、助けが必要。">要支援認定を受けており、助けが必要。</option>
+	<option value="要介護認定を受けており、助けが必要。">要介護認定を受けており、助けが必要。</option>
+	<option value="障がい者認定を受けており、助けが必要。">障がい者認定を受けており、助けが必要。</option>
+     </select>
+     <input type="hidden" name="entry.198548713">
+   </div>
+
+   <div>
+     <label>その他（具体的にご記入ください。）</label>
+     <input type="text" name="entry.1862976019">
+   </div>
+	   
+   問８：あなたの職場または学校などの位置を教えてください。職場・学校などの名称、または住所を番地までご記入ください。
+　　<div>
+     <label>名称</label>
+     <input type="text" name="entry.632425157">
+   </div>
+　　<div>
+     <label>住所</label>
+     <input type="text" name="entry.849395908">
+   </div>
+　　
+　　問９：あなたの平日の平均的な行動を下の表にご記入ください。
+　　<table>
+　　　　<tr>
+    　　　<th>時刻</th>
+	 <th>行動</th>
+	 <th>誰と</th>
+	 <th>場所</th>
+　　　　</tr>
+	  
+       <tr>
+         <td><input type="time" name="entry.276627774" step="600"></td>
+	 <td>
+	    <select id="action" required>
+     	       <option disabled selected>選択してください</option>
+     	       <option value="起床">起床</option>
+     	       <option value="食事">食事</option>
+     	       <option value="出勤・登校">出勤・登校</option>
+     	       <option value="買い物">買い物</option>
+     	       <option value="送迎">送迎</option>
+	       <option value="娯楽">娯楽</option>
+	       <option value="帰宅">帰宅</option>
+	       <option value="就寝">就寝</option>
+            </select>
+            <input type="hidden" name="entry.219809398">
+	 </td>
+	 <td>
+	    <label><input type="radio" name="entry.1568708261" value="家族・親族">家族・親族</label>
+	    <label><input type="radio" name="entry.1568708261" value="友人">友人</label>
+	    <label>その他</label><input type="text" name="entry.1568708261">
+	 </td>
+	 <td><input type="text" name="entry.2086656375"></td>
+       </tr>
+	  
+       <tr>
+         <td><input type="time" name="entry.30834516" step="600"></td>
+	 <td>
+	    <select id="action" required>
+     	       <option disabled selected>選択してください</option>
+     	       <option value="起床">起床</option>
+     	       <option value="食事">食事</option>
+     	       <option value="出勤・登校">出勤・登校</option>
+     	       <option value="買い物">買い物</option>
+     	       <option value="送迎">送迎</option>
+	       <option value="娯楽">娯楽</option>
+	       <option value="帰宅">帰宅</option>
+	       <option value="就寝">就寝</option>
+            </select>
+            <input type="hidden" name="entry.1138177677">
+	 </td>
+	 <td>
+	    <label><input type="radio" name="entry.480557137" value="家族・親族">家族・親族</label>
+	    <label><input type="radio" name="entry.480557137" value="友人">友人</label>
+	    <label>その他</label><input type="text" name="entry.480557137">
+	 </td>
+	 <td><input type="text" name="entry.1330683577"></td>
+       </tr>
+   </table>
+	
    <div>
      <label>以下の地図上をクリックして、避難経路に沿ってピンを立ててください.</label>
      <input type="text" name="entry.1323365906" value="選択されていません"required/>
