@@ -11,5 +11,8 @@ body {
 }
 #question{
   list-style-type:none;
-  
 }  
+.q{
+  display: block;
+  width: 70%;
+}
