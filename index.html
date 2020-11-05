@@ -22,17 +22,15 @@
 
 <div><h1><b>津波からの避難に関するアンケート</b></h1></div>
 	
+<div>	
 <form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:80%; position:relative;top:20px;">
 　<ul>
   <li> 
-   <div>
      <label>問１：あなたの世帯の現住所を教えてください。</label>
      <input type="text" name="entry.1763673255">
-   </div>
   </li>
   
   <li> 
-   <div>
      <label>問２：あなたと世帯主との続柄について教えてください。世帯主とは、あなたの世帯で最も収入の多い人のことです。</label>
      <select id="relation" name="entry.1205779165" required>
      	<option disabled selected>選択してください</option>
@@ -45,11 +43,9 @@
 	<option value="孫">孫</option>
 	<option value="その他">その他</option>
      </select>
-   </div>
   </li>
 	 
   <li> 
-   <div>
      <label>問３：あなたの性別を教えてください。</label>
      <select id="sex" name="entry.667348671" required>
      	<option disabled selected>選択してください</option>
@@ -57,19 +53,15 @@
 	<option value="女">女</option>
 	<option value="その他">その他</option>
      </select>
-   </div>
   </li>
 
   <li>	 
-   <div>
      <label>問４：あなたの年齢を教えてください。</label>
      <input type="text" name="entry.1926174947">
-   </div>
   </li>
 
   <li>	 
-　　<div>
-     問５：あなたの職業について以下の中から選択してください。
+     <label>問５：あなたの職業について以下の中から選択してください。</label>
      <select id="occupation" name="entry.1962891009" required>
      	<option disabled selected>選択してください</option>
      	<option value="会社員（正社員）">会社員（正社員）</option>
@@ -85,12 +77,10 @@
 	<option value="無職">無職</option>
 	<option value="その他">その他</option>
      </select>
-   </div>
   </li>
 	 
   <li>	 
-　　<div>
-   　　問６：次の役職・職業に該当する方は当てはまるものを全て選択してください。
+   　　<label>問６：次の役職・職業に該当する方は当てはまるものを全て選択してください。</label>
    　　<label>
       　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="消防団員">消防団員
 　　　　</label>
@@ -103,11 +93,9 @@
 　　　　<label>
       　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="福祉施設職員">福祉施設職員
 　　　　</label>
-   </div>
   </li>
 	 
   <li>	 
-   <div>
      <label>問７：あなたは避難するに当たって、他の人の助けを必要としていますか。助けを必要とする場合はその理由を選択してください。。</label>
      <select id="help" name="entry.198548713" required>
      	<option disabled selected>選択してください</option>
@@ -116,27 +104,20 @@
 	<option value="要介護認定を受けており、助けが必要。">要介護認定を受けており、助けが必要。</option>
 	<option value="障がい者認定を受けており、助けが必要。">障がい者認定を受けており、助けが必要。</option>
      </select>
-   </div>
-   <div>
      <label>その他（具体的にご記入ください。）</label>
      <input type="text" name="entry.1862976019">
-   </div>
   </li>	  
   	  
   <li>	   
    問８：あなたの職場または学校などの位置を教えてください。職場・学校などの名称、または住所を番地までご記入ください。
-　　<div>
      <label>名称</label>
      <input type="text" name="entry.632425157">
-   </div>
-　　<div>
      <label>住所</label>
      <input type="text" name="entry.849395908">
-   </div>
   </li>　　
 	
   <li>	 
-　　問９：あなたの平日の平均的な行動を下の表にご記入ください。
+　　<label>問９：あなたの平日の平均的な行動を下の表にご記入ください。</label>
 　　<table border="1">
 　　　　<tr>
     　　　<th>時刻</th>
@@ -194,15 +175,15 @@
   </li>
 	 
   <li>	 
-   <div>
      <label>以下の地図上をクリックして、避難経路に沿ってピンを立ててください.</label>
      <input type="text" name="entry.1323365906" value="選択されていません"required/>
-   </div>
   <button type="submit">回答を送信</button>
   </li>
  </ul>
 </form>
-	
+</div>
+
+<div>	
 <form style="position:relative; top:50px;">
   <select id="place" style="width:200px; height:52px;">
     <option value="">地域を選択してください</option>
@@ -212,8 +193,9 @@
   </select>
 <input type="button" value="決定" onclick="calcBmi();" style="width:200px; height:52px; position:relative;">
 </form>
-
-<div id="map" style="position:relative;height:80%; width:80%; top:70px; left:20px;"　align="center";></div>
+</div>
+	
+<div id="map" 　align="center";></div>　<!--style="position:relative;height:80%; width:80%; top:70px; left:20px;"-->
 
 <ul style="position:relative; top:90px;">
     <li><b>ポイント数: </b><span id="cnt"></span></li>
@@ -225,7 +207,7 @@
 
 
 
-  <script>
+ <script>
     var array0 = [['marker','latitude','longitude']];
   var table  = array0;
 
