@@ -16,18 +16,20 @@
 <div id="header"><h1>津波からの避難に関するアンケート</h1></div>
 	
 	
+<div id="form">
 <form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:80%; position:relative;top:20px;">
 　<ul id="question">
   <li> 
-     <label>
+     <label class="q">
        問１：あなたの世帯の現住所を教えてください。
        <input type="text" name="entry.1763673255">
      </label>
   </li>
   
   <li> 
-     <label>問２：あなたと世帯主との続柄について教えてください。世帯主とは、あなたの世帯で最も収入の多い人のことです。</label>
-     <select id="relation" name="entry.1205779165" required>
+     <label class="q">
+       問２：あなたと世帯主との続柄について教えてください。世帯主とは、あなたの世帯で最も収入の多い人のことです。
+      <select id="relation" name="entry.1205779165" required>
      	<option disabled selected>選択してください</option>
      	<option value="世帯主本人">世帯主本人</option>
      	<option value="夫・妻">夫・妻</option>
@@ -37,29 +39,33 @@
 	<option value="祖父母">祖父母</option>
 	<option value="孫">孫</option>
 	<option value="その他">その他</option>
-     </select>
+      </select>
+     </label>
   </li>
 	 
   <li> 
-     <label>問３：あなたの性別を教えてください。</label>
-     <select id="sex" name="entry.667348671" required>
+     <label class="q">
+	問３：あなたの性別を教えてください。
+      <select id="sex" name="entry.667348671" required>
      	<option disabled selected>選択してください</option>
      	<option value="男">男</option>
 	<option value="女">女</option>
 	<option value="その他">その他</option>
-     </select>
+      </select>
+     </label>
   </li>
 
   <li>	 
-     <label>
+     <label class="q">
        問４：あなたの年齢を教えてください。
        <input type="text" name="entry.1926174947">
      </label>
   </li>
 
   <li>	 
-     <label>問５：あなたの職業について以下の中から選択してください。</label>
-     <select id="occupation" name="entry.1962891009" required>
+     <label class="q">
+	問５：あなたの職業について以下の中から選択してください。
+      <select id="occupation" name="entry.1962891009" required>
      	<option disabled selected>選択してください</option>
      	<option value="会社員（正社員）">会社員（正社員）</option>
      	<option value="会社員（契約社員）">会社員（契約社員）</option>
@@ -74,10 +80,11 @@
 	<option value="無職">無職</option>
 	<option value="その他">その他</option>
      </select>
+    </label>
   </li>
 	 
   <li>	 
-   　　<label>問６：次の役職・職業に該当する方は当てはまるものを全て選択してください。</label>
+   　　<label class="q">問６：次の役職・職業に該当する方は当てはまるものを全て選択してください。</label>
    　　<label>
       　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="消防団員">消防団員
 　　　　</label>
@@ -93,21 +100,23 @@
   </li>
 	 
   <li>	 
-     <label>問７：あなたは避難するに当たって、他の人の助けを必要としていますか。助けを必要とする場合はその理由を選択してください。。</label>
-     <select id="help" name="entry.198548713" required>
+     <label class="q">
+	問７：あなたは避難するに当たって、他の人の助けを必要としていますか。助けを必要とする場合はその理由を選択してください。
+       <select id="help" name="entry.198548713" required>
      	<option disabled selected>選択してください</option>
      	<option value="助けは必要ない。">助けは必要ない。</option>
 	<option value="要支援認定を受けており、助けが必要。">要支援認定を受けており、助けが必要。</option>
 	<option value="要介護認定を受けており、助けが必要。">要介護認定を受けており、助けが必要。</option>
 	<option value="障がい者認定を受けており、助けが必要。">障がい者認定を受けており、助けが必要。</option>
-     </select>
+      </select>
+     </label>
      <label>その他（具体的にご記入ください。）
        <input type="text" name="entry.1862976019">
      </label>
   </li>	  
   	  
   <li>	   
-   問８：あなたの職場または学校などの位置を教えてください。職場・学校などの名称、または住所を番地までご記入ください。
+   <label class="q">問８：あなたの職場または学校などの位置を教えてください。職場・学校などの名称、または住所を番地までご記入ください。</label>
      <label>名称
        <input type="text" name="entry.632425157">
      </label>
@@ -117,7 +126,7 @@
   </li>　　
 	
   <li>	 
-　　<label>問９：あなたの平日の平均的な行動を下の表にご記入ください。</label>
+　　<label class="q">問９：あなたの平日の平均的な行動を下の表にご記入ください。</label>
 　　<table border="1">
 　　　　<tr>
     　　　<th>時刻</th>
@@ -181,7 +190,8 @@
  </ul>
  <button type="submit">回答を送信</button>
 </form>
-
+</div>
+	
 <div id="area-selection">	
 <form>  <!--style="position:relative; top:50px;"-->
   <select id="place">  <!--style="width:200px; height:52px;"-->
