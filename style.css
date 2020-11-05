@@ -12,6 +12,6 @@ body {
 #question{
   list-style-type:none;
 }  
-label, input, select{
+label, select, .q input{
   display: block;
 }
