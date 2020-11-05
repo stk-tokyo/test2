@@ -22,11 +22,15 @@
 <div><h1><b>津波からの避難に関するアンケート</b></h1></div>
 	
 <form id="path" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeAfoJ_AGvIfQCIs4x9AHZt6Bu31lkmmjo4NsU_UrfIS7XDOQ/formResponse" method="POST" style="width:80%; position:relative;top:20px;">
-　　<div>
+　<ul>
+  <li> 
+   <div>
      <label>問１：あなたの世帯の現住所を教えてください。</label>
      <input type="text" name="entry.1763673255">
    </div>
-	
+  </li>
+  
+  <li> 
    <div>
      <label>問２：あなたと世帯主との続柄について教えてください。世帯主とは、あなたの世帯で最も収入の多い人のことです。</label>
      <select id="relation" name="entry.1205779165" required>
@@ -41,7 +45,9 @@
 	<option value="その他">その他</option>
      </select>
    </div>
-	
+  </li>
+	 
+  <li> 
    <div>
      <label>問３：あなたの性別を教えてください。</label>
      <select id="sex" name="entry.667348671" required>
@@ -51,12 +57,16 @@
 	<option value="その他">その他</option>
      </select>
    </div>
-	   
+  </li>
+
+  <li>	 
    <div>
      <label>問４：あなたの年齢を教えてください。</label>
      <input type="text" name="entry.1926174947">
    </div>
-	   
+  </li>
+
+  <li>	 
 　　<div>
      <label>問５：あなたの職業について以下の中から選択してください。</label>
      <select id="occupation" name="entry.1962891009" required>
@@ -75,7 +85,9 @@
 	<option value="その他">その他</option>
      </select>
    </div>
-	   
+  </li>
+	 
+  <li>	 
 　　<div>
    　　<label>問６：次の役職・職業に該当する方は当てはまるものを全て選択してください。</label>
    　　<label>
@@ -91,7 +103,9 @@
       　　<input class="checkbox form-check-input" type="checkbox" name="entry.1591379079" value="福祉施設職員">福祉施設職員
 　　　　</label>
    </div>
-
+  </li>
+	 
+  <li>	 
    <div>
      <label>問７：あなたは避難するに当たって、他の人の助けを必要としていますか。助けを必要とする場合はその理由を選択してください。。</label>
      <select id="help" name="entry.198548713" required>
@@ -102,12 +116,13 @@
 	<option value="障がい者認定を受けており、助けが必要。">障がい者認定を受けており、助けが必要。</option>
      </select>
    </div>
-
    <div>
      <label>その他（具体的にご記入ください。）</label>
      <input type="text" name="entry.1862976019">
    </div>
-	   
+  </li>	  
+  	  
+  <li>	   
    問８：あなたの職場または学校などの位置を教えてください。職場・学校などの名称、または住所を番地までご記入ください。
 　　<div>
      <label>名称</label>
@@ -117,7 +132,9 @@
      <label>住所</label>
      <input type="text" name="entry.849395908">
    </div>
-　　
+  </li>　　
+	
+  <li>	 
 　　問９：あなたの平日の平均的な行動を下の表にご記入ください。
 　　<table border="1">
 　　　　<tr>
@@ -173,12 +190,16 @@
 	 <td><input type="text" name="entry.1330683577"></td>
        </tr>
    </table>
-	
+  </li>
+	 
+  <li>	 
    <div>
      <label>以下の地図上をクリックして、避難経路に沿ってピンを立ててください.</label>
      <input type="text" name="entry.1323365906" value="選択されていません"required/>
    </div>
   <button type="submit">回答を送信</button>
+  </li>
+ </ul>
 </form>
 	
 <form style="position:relative; top:50px;">
