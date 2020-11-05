@@ -12,7 +12,7 @@ body {
 #question{
   list-style-type:none;
 }  
-.q{
+label{
   display: block;
   width: 70%;
 }
