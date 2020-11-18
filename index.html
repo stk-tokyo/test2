@@ -251,34 +251,7 @@
 
       // クリックイベントを追加
       map.addListener('click', function(e) {
-        //getClickLatLng(e.latLng, map);
-	click_count++;
-      	str_cnt = String(click_count);
-      	str_lat = String(e.latLng.lat());
-      	str_lng = String(e.latLng.lng());
-      	var array1 = [str_cnt, str_lat, str_lng];
-      	array0.push(array1);
-      	// 座標を表示
-      	document.getElementById('lat').textContent = e.latLng.lat();
-      	document.getElementById('lng').textContent = e.latLng.lng();
-      	document.getElementById('cnt').textContent = click_count;
-  
-
-      	// マーカーを設置
-      	var marker = new google.maps.Marker({
-        	position: e.latLng,
-        	map: map,
-		title: str_cnt,
-		  label: {
-	  	  text: str_cnt,
-	  	  color: "white"
-		}
-      	});
-
-      	var size = new google.maps.Size( 200, 200 ) ;
-
-      	// 座標の中心をずらす
-           map.panTo(e.latLng);
+        getClickLatLng(e.latLng, map);
 	//ここから下３行を追加した(11/18)  
 　　     marker.addListener('click', function(){
         this.setMap(null);
@@ -287,7 +260,30 @@
     }
 
     function getClickLatLng(lat_lng, map) {
-      
+      click_count++;
+      str_cnt = String(click_count);
+      str_lat = String(lat_lng.lat());
+      str_lng = String(lat_lng.lng());
+      var array1 = [str_cnt, str_lat, str_lng];
+      array0.push(array1);
+      // 座標を表示
+      document.getElementById('lat').textContent = lat_lng.lat();
+      document.getElementById('lng').textContent = lat_lng.lng();
+      document.getElementById('cnt').textContent = click_count;
+  
+
+      // マーカーを設置
+      var marker = new google.maps.Marker({
+        position: lat_lng,
+        map: map,
+	title: str_cnt,
+	label: {text: str_cnt}
+      });
+
+      var size = new google.maps.Size( 200, 200 ) ;
+
+      // 座標の中心をずらす
+           map.panTo(lat_lng);
     }
 
 
