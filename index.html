@@ -220,9 +220,6 @@
     // クリックイベントを追加
     map.addListener('click', function(e) {
       getClickLatLng(e.latLng, map);
-    //ここから下３行を追加した(11/18)  
-　　 marker.addListener('dblclick', function(){
-        this.setMap(null);
     });
     });
   }
@@ -252,9 +249,6 @@
       // クリックイベントを追加
       map.addListener('click', function(e) {
         getClickLatLng(e.latLng, map);
-	//ここから下３行を追加した(11/18)  
-　　     marker.addListener('click', function(){
-        this.setMap(null);
       });
       });
     }
@@ -277,7 +271,10 @@
         position: lat_lng,
         map: map,
 	title: str_cnt,
-	label: {text: str_cnt}
+	label: {
+	  text: str_cnt,
+	  color: "white"
+	}
       });
 
       var size = new google.maps.Size( 200, 200 ) ;
