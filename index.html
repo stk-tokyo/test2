@@ -214,7 +214,8 @@
   // マップの初期化
     var map = new google.maps.Map(document.getElementById('map'), {
     zoom: 17,
-    center: {lat: st_lat, lng: st_lng}
+    center: {lat: st_lat, lng: st_lng},
+    clickabeicons: false,
     });
     // クリックイベントを追加
     map.addListener('click', function(e) {
@@ -245,6 +246,7 @@
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 17,
         center: {lat:33.462899, lng: 132.423363},
+	clickableicons: false,
       });
 
       // クリックイベントを追加
