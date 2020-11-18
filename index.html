@@ -253,7 +253,7 @@
       map.addListener('click', function(e) {
         getClickLatLng(e.latLng, map);
 	//ここから下３行を追加した(11/18)  
-　　     marker.addListener('dblclick', function(){
+　　     marker.addListener('click', function(){
         this.setMap(null);
       });
       });
@@ -275,7 +275,7 @@
       // マーカーを設置
       var marker = new google.maps.Marker({
         position: lat_lng,
-        map: map
+        map: map,
 	title: str_cnt
       });
 
