@@ -189,7 +189,7 @@
         <option value="sionasi">塩成</option>
       </select>
       <input type="button" value="決定" onclick="calcBmi();">  <!--style="width:200px; height:52px; position:relative;"-->
-      <!-- <input type="button" value="やり直す" onclick="calcBmi();">  -->
+      <input type="button" value="やり直す" onclick="();">
     </form>
   </div>
 	
@@ -239,17 +239,9 @@
     var click_count = 0;
    
     function initMap() {
-      // マップの初期化
-      var map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 17,
-        center: {lat:33.462899, lng: 132.423363},
-	clickableIcons: false,
-      });
-
-      // クリックイベントを追加
-      map.addListener('click', function(e) {
-        getClickLatLng(e.latLng, map);
-      });
+      marker.Setmap(null);
+      array0 = [['marker','latitude','longitude']];
+      calcBmi();
     }
 
     function getClickLatLng(lat_lng, map) {
