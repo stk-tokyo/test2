@@ -221,7 +221,6 @@
     map.addListener('click', function(e) {
       getClickLatLng(e.latLng, map);
     });
-    });
   }
 
   function calcBmi(){
@@ -250,7 +249,6 @@
       map.addListener('click', function(e) {
         getClickLatLng(e.latLng, map);
       });
-      });
     }
 
     function getClickLatLng(lat_lng, map) {
@@ -273,8 +271,8 @@
 	title: str_cnt,
 	label: {
 	  text: str_cnt,
-	  color: "white"
-	}
+	  color: "white",
+	},
       });
 
       var size = new google.maps.Size( 200, 200 ) ;
