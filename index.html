@@ -220,6 +220,10 @@
     map.addListener('click', function(e) {
       getClickLatLng(e.latLng, map);
     });
+    //ここから下３行を追加した(11/18)  
+　　 marker.addListener('click', function(){
+        this.setMap(null);
+    });
   }
 
   function calcBmi(){
