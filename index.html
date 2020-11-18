@@ -189,7 +189,7 @@
         <option value="sionasi">塩成</option>
       </select>
       <input type="button" value="決定" onclick="calcBmi();">  <!--style="width:200px; height:52px; position:relative;"-->
-      <input type="button" value="やり直す" onclick="();">
+      <input type="button" value="やり直す" onclick="InitMap();">
     </form>
   </div>
 	
@@ -209,6 +209,7 @@
  <script>
   var array0 = [['marker','latitude','longitude']];
   var table  = array0;
+  var marker
 
   // 場所選択時における画面遷移
   function move(st_lat,st_lng) {
@@ -238,7 +239,7 @@
 
     var click_count = 0;
    
-    function initMap() {
+    function InitMap() {
       marker.Setmap(null);
       array0 = [['marker','latitude','longitude']];
       calcBmi();
